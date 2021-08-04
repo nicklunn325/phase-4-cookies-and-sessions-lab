@@ -58,6 +58,7 @@ RSpec.describe "Articles", type: :request do
         get "/articles/#{Article.first.id}"
         get "/articles/#{Article.first.id}"
         get "/articles/#{Article.first.id}"
+        # get "/articles/#{Article.first.id}"
 
         expect(response.body).to include_json({ 
           error: "Maximum pageview limit reached"
@@ -68,6 +69,7 @@ RSpec.describe "Articles", type: :request do
         get "/articles/#{Article.first.id}"
         get "/articles/#{Article.first.id}"
         get "/articles/#{Article.first.id}"
+        # get "/articles/#{Article.first.id}"
 
         expect(response).to have_http_status(:unauthorized)
       end
